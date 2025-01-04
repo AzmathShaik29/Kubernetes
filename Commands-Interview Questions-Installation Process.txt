@@ -1,3 +1,16 @@
+How to install Kubernetes cluster in local machine?
+
+1. Install Minikube
+2. Install Kubectl
+
+How to install minikube?
+minikube.sigs.k8s.io
+
+How to install kubectl?
+kuberenetes.io
+|-> Install Tools
+
+
 what is Kubernetes architecture
 
 Kubernetes (K8s) is a container orchestration system with a master-worker architecture:
