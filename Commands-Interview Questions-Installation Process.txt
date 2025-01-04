@@ -1,0 +1,87 @@
+what is Kubernetes architecture
+
+Kubernetes (K8s) is a container orchestration system with a master-worker architecture:
+
+Master Node (Control Plane) Components:
+
+1. API Server
+
+	- Central management point
+	- Handles all API requests
+	- Gateway for all administrative tasks
+2. etcd
+
+	- Distributed key-value store
+	- Stores all cluster data and state
+	- Source of truth for the cluster
+3. Scheduler
+
+	- Assigns pods to worker nodes
+	- Considers resources, constraints, and policies
+	- Makes intelligent placement decisions
+
+4. Controller Manager
+
+	- Runs controller processes
+	- Handles node failures, replication
+	- Maintains desired state
+
+Worker Node Components:
+
+1. Kubelet
+
+	- Primary node agent
+	- Ensures containers are running
+	- Reports node status to master
+
+2. Container Runtime
+
+	- Runs containers (Docker, containerd)
+	- Handles container operations
+	- Manages container lifecycle
+
+3. Kube Proxy
+
+	- Network proxy
+	- Maintains network rules
+	- Handles pod networking
+
+Key Concepts:
+
+Pods: Smallest deployable units
+Services: Expose applications
+Deployments: Manage pod replicas
+Namespaces: Virtual clusters
+
+This architecture ensures:
+
+High availability
+Scalability
+Self-healing
+Automated rollouts/rollbacks
+
+
+Kubelet
+
+>> Kubelet is basically responsible for creation of the pods and it ensures the Pod is always in running state, if not then it will take the necessary action using the Kubernetes control plane
+
+Kube proxy
+
+>> Is responsible for the networking like generating the IP addresses or load balancers and it uses IP tables on the Linux Machine.
+
+Container runtime
+
+>> It is responsible for running your container
+
+
+Q. How to manage 100's of Kubernetes clusters?
+The primary tool to create Kubernetes cluster is KOPS and also we can use kubeadm.
+
+Q. What is the difference between KOPS and kubeadmin?
+KOPS and kubeadm are both tools used to deploy the Kubernetes clusters, diff:
+
+Roles: Kops is responsible for the entire lifecycle of a Kubernetes cluster, while kubeadm is used to bootstrap a minimal cluster.
+
+KOPS: Manages the entire lifecycle of a Kubernetes cluster, including provisioning, upgrading, and deleting. It also knows about everything related to cluster, including nodes, masters, load balancers, cloud providers, monitoring, networking, and logging.
+
+Kubeadmm: A comman-line tool that automates the creation of a Kubernetes cluster by bootstrapping the control plane, joining the nodes, and managing the necessary Kubernetes objects. Kubeadm is designed to simplify bootstrapping and installing cluster add-ons.
