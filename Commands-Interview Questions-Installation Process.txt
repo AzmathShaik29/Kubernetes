@@ -10,6 +10,7 @@ How to install kubectl?
 kuberenetes.io
 |-> Install Tools
 
+Should install Docker Desktop also
 
 what is Kubernetes architecture
 
