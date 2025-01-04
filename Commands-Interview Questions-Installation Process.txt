@@ -12,6 +12,11 @@ kuberenetes.io
 
 Should install Docker Desktop also
 
+Q. What is the difference between Kubernetes and AWS EKS?
+The main difference between Kubernetes and AWS EKS is that EKS is a managed service that simplifies the use of
+Kubernetes, while Kubernetes is a standalone platform that requires manual setup and management
+
+
 what is Kubernetes architecture
 
 Kubernetes (K8s) is a container orchestration system with a master-worker architecture:
